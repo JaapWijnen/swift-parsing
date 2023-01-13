@@ -27,19 +27,6 @@ let package = Package(
       name: "Parsing",
       dependencies: [.product(name: "CasePaths", package: "swift-case-paths")]
     ),
-    .testTarget(
-      name: "ParsingTests",
-      dependencies: [
-        "Parsing"
-      ]
-    ),
-    .executableTarget(
-      name: "swift-parsing-benchmark",
-      dependencies: [
-        "Parsing",
-        .product(name: "Benchmark", package: "Benchmark"),
-      ]
-    ),
     .executableTarget(
       name: "variadics-generator",
       dependencies: [.product(name: "ArgumentParser", package: "swift-argument-parser")]
